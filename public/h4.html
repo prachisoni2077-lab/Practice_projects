@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cute Animated Layout</title>
+<link rel="stylesheet" href="/stylee.css">
+</head>
+<body>
+
+<!-- Pink Box with Text -->
+<div class="pink">
+    <!-- Floating GIF Container -->
+    <div class="gif-container">
+        <div class="tenor-gif-embed" data-postid="1501378038107654252" data-share-method="host" data-aspect-ratio="1.0628" data-width="100%">
+            <a href="https://tenor.com/view/snek-bubu-babu-gif-1501378038107654252">Snek Bubu Sticker</a>
+            from <a href="https://tenor.com/search/snek-stickers">Snek Stickers</a>
+        </div>
+    </div>
+
+    <!-- Text Below Sticker -->
+    <span class="span">bolo 💖</span>
+</div>
+
+<!-- Buttons -->
+<div class="block">
+    <form method="GET" action= "/home/again/firse/firse2/final"><button type="submit" id="yesBtn">Yes</button></form>
+    <button id="noBtn">No</button>
+</div>
+
+<!-- Tenor Script -->
+<script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+
+<!-- No Button Dodge JS -->
+ <script>
+const noBtn = document.getElementById("noBtn");
+
+// Make position absolute
+noBtn.style.position = "absolute";
+
+// Start button at center
+noBtn.style.left = `${window.innerWidth / 2 - noBtn.offsetWidth / 2}px`;
+noBtn.style.top = `${window.innerHeight / 2 - noBtn.offsetHeight / 2}px`;
+
+noBtn.addEventListener("mouseover", () => {
+    const screenWidth = window.innerWidth;
+    const screenHeight = window.innerHeight;
+    const btnWidth = noBtn.offsetWidth;
+    const btnHeight = noBtn.offsetHeight;
+
+    const x = Math.random() * (screenWidth - btnWidth);
+    const y = Math.random() * (screenHeight - btnHeight);
+
+    noBtn.style.left = `${x}px`;
+    noBtn.style.top = `${y}px`;
+});
+
+noBtn.addEventListener("click", (e) => e.preventDefault());
+const yesBtn = document.getElementById("yesBtn");
+yesBtn.addEventListener("click", () => {
+    window.location.href = "/home/again/firse/firse2/final";
+});
+
+
+</script>
+</body>
+
+
+</body>
+</html>
