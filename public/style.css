@@ -42,6 +42,7 @@ body {
     width: 150px;
     margin-bottom: 10px;
     animation: float 3s ease-in-out infinite;
+    position: relative;
 }
 
 @keyframes float {
@@ -92,4 +93,8 @@ button:hover {
 }
 .block{
     display:flex;
+}
+img{
+    border-radius: 20px;
+    box-shadow:3px 3px 8px rgba(0,0,0,0.3); ;
 }
